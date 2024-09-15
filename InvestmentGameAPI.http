@@ -1,0 +1,6 @@
+@InvestmentGameAPI_HostAddress = http://localhost:5212
+
+GET {{InvestmentGameAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
