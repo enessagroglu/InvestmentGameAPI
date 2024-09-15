@@ -1,6 +1,7 @@
 using InvestmentGameAPI.Application.Interfaces;
 using InvestmentGameAPI.Application.Services;
 using InvestmentGameAPI.Infrastructure.Data;
+using InvestmentGameAPI.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +22,8 @@ builder.Services.AddScoped<ICompanyService, CompanyService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserCompanyOwnershipService, UserCompanyOwnershipService>();
 builder.Services.AddScoped<IInGameItemService, InGameItemService>();
+builder.Services.AddScoped<IStockMarketService, StockMarketService>();
+builder.Services.AddHostedService<StockMarketBackgroundService>(); // Background service'i ekliyoruz
 
 // Build the app
 var app = builder.Build();

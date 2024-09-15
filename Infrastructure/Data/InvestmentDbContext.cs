@@ -13,6 +13,8 @@ namespace InvestmentGameAPI.Infrastructure.Data
         public DbSet<UserCompanyOwnership> UserCompanyOwnerships { get; set; }
         public DbSet<InGameItem> InGameItems { get; set; }
         public DbSet<UserItemOwnership> UserItemOwnerships { get; set; }
+        public DbSet<CompanyPriceHistory> CompanyPriceHistories { get; set; }
+
 
         // Model yapılandırma
         protected override void OnModelCreating(ModelBuilder modelBuilder)
